@@ -1,13 +1,10 @@
 // DJSv12
 
-/*
 const Discord = require('discord.js');
-require('@weky/inlinereply');
 const client = new Discord.Client();
-const disbut = require('discord-buttons');
-const { Calculator } = require('../index');
-disbut(client);
-
+require('discord-buttons')(client);
+const Calculator = require('../src/v12/Calculator');
+require('@weky/inlinereply');
 client.on('ready', async () => {
 	console.log(`Logged in as ${client.user.tag}`);
 });
@@ -29,11 +26,10 @@ client.on('message', async (message) => {
 	}
 });
 
-client.login('DISCORD_BOT_TOKEN');
-*/
+client.login('');
 
 // DJSv13
-const Discord = require('discord.js');
+/** const Discord = require('discord.js');
 const client = new Discord.Client();
 const { Calculator } = require('../index');
 
@@ -59,3 +55,4 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login('DISCORD_BOT_TOKEN');
+*/
