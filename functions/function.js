@@ -5,8 +5,15 @@ const fetch = require('node-fetch');
 const words = require('../data/words.json');
 const { boxConsole } = require('./boxConsole');
 const { MessageActionRow, MessageButton } = require('discord.js');
-
+const discordbuttons = require('discord-buttons');
 module.exports = {
+	GetButtonsV12: async function(label, ID, style, disabled) {
+		if(!label) throw new Error('WekyError: label not provided');
+		if(!ID) throw new Error('WekyError: ID not provided');
+		if(!style) throw new Error('WekyError: ID not provided');
+		if(!disabled) disabled = false;
+		return new discordbuttons.MessageButton().setStyle(style).setID(ID).setLabel(label).setDisabled(disabled);
+	},
 	fetchhtml: async function(url) {
 		const options = {
 			header: {
